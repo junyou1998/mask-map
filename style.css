@@ -1,0 +1,169 @@
+* {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#reset {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 5000;
+  background-color: #ffc400;
+  color: #fff;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 50% 0 0;
+  cursor: pointer;
+}
+
+.pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  background-color: #00c853;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-box-shadow: inset 0px 0px 0px 3px #009624;
+          box-shadow: inset 0px 0px 0px 3px #009624;
+}
+
+.pin:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.pin.empty {
+  background-color: #f50057;
+  -webkit-box-shadow: inset 0px 0px 0px 3px #bb002f;
+          box-shadow: inset 0px 0px 0px 3px #bb002f;
+}
+
+.pin.danger {
+  background-color: #ffb300;
+  -webkit-box-shadow: inset 0px 0px 0px 3px #c68400;
+          box-shadow: inset 0px 0px 0px 3px #c68400;
+}
+
+.leaflet-div-icon {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.tips {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.tips .tip {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #00c853;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media screen {
+  .tips .tip {
+    font-size: 14px;
+  }
+}
+
+.tips .tip.danger {
+  background-color: #ffb300;
+}
+
+.tips .tip.empty {
+  background-color: #f50057;
+}
+
+.leaflet-verticalcenter {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  top: 50%;
+  /* possible because the placeholder's parent is the map */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  /* using the CSS3 Transform technique */
+  padding-top: 10px;
+}
+
+.leaflet-verticalcenter .leaflet-control {
+  margin-bottom: 10px;
+}
+
+#info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100000;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4B99FF;
+  color: #fff;
+  border-radius: 50% 0 0 0;
+  font-size: 20px;
+}
+
+.copyright {
+  width: 100%;
+  font-size: 14px;
+  color: #444;
+  text-align: left;
+}
+/*# sourceMappingURL=style.css.map */
